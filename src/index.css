@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: #1A1A2E; /* ColorHunt Palette: 1A1A2E */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(15, 52, 96, 0.5) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(233, 69, 96, 0.2) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(15, 52, 96, 0.5) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(26, 26, 46, 0.8) 0px, transparent 50%);
+  color: #EEEEEE;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(22, 33, 62, 0.4); /* ColorHunt Palette: 16213E */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-input {
+  background: rgba(15, 52, 96, 0.2); /* ColorHunt Palette: 0F3460 */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  color: #EEEEEE;
+}
+
+.glass-input option {
+  background-color: #16213E;
+  color: #EEEEEE;
+}
+
+.glass-button {
+  background: linear-gradient(135deg, #E94560 0%, #C22E47 100%); /* ColorHunt Palette: E94560 */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(233, 69, 96, 0.4);
+  box-shadow: 0 4px 12px 0 rgba(233, 69, 96, 0.3);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.glass-button:hover {
+  background: linear-gradient(135deg, #F95671 0%, #D33F58 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px 0 rgba(233, 69, 96, 0.4);
+}
+
+.glass-editor {
+  background: rgba(10, 10, 18, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Custom scrollbar for textareas */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(233, 69, 96, 0.4);
+  color: inherit;
+}
+
+/* Prism overrides for transparent background */
+pre[class*="language-"] {
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+}
+code[class*="language-"], pre[class*="language-"] {
+  text-shadow: none !important;
+}
+
+/* Editor line numbers */
+.editor-line-number {
+  display: inline-block;
+  width: 2rem;
+  text-align: right;
+  margin-right: 1rem;
+  color: rgba(255, 255, 255, 0.2);
+  user-select: none;
+}

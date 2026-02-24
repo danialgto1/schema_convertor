@@ -1,0 +1,5 @@
+{
+  "name": "OmniSchema",
+  "description": "Convert schemas and data models between any programming language or format.",
+  "requestFramePermissions": []
+}
